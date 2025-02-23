@@ -19,7 +19,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}})  # Enable CORS for React frontend
+CORS(app, resources={r"/": {"origins": "https://menta.vercel.app"}}, supports_credentials=True)  # Enable CORS for React frontend
 
 # # Load trained model & scaler
 MODEL_PATH = ("./mental_random_forest.pkl")
